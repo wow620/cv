@@ -27,3 +27,20 @@ return a + b;
 
 ### English:
 - Intermediate/Upper-intermediate
+- ## Courses:
+
+- HTML and CSS Tutorials on w3schools (completed)
+  - Tutorials: 194 points
+  - Quizzes: 200 points  
+  - Exercises: 226 points
+  - **Total: 620 points**
+
+- JavaScript Manual on learnjavascript.ru (in progress)
+
+- RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
+
+---
+
+## Languages:
+
+- English — Intermediate/Upper-intermediate (according to EF SET test)
