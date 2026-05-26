@@ -1,0 +1,280 @@
+/* ---------- RESET & GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f7fa;
+
+    /* Flex для прижатия футера */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ---------- HEADER & NAVIGATION ---------- */
+.header {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+
+.nav__link:hover {
+    color: #f1c40f;
+}
+
+/* ---------- MAIN & GRID (Сетка 2 колонки) ---------- */
+.main {
+    flex: 1; /* Занимает всё свободное место */
+    padding: 3rem 0;
+}
+
+.main__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.section {
+    flex: 1 1 calc(50% - 2rem); /* Две колонки с учетом gap */
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+}
+
+.section__title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #f1c40f;
+    display: inline-block;
+    color: #2c3e50;
+}
+
+.section__list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.section__item {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Кастомные маркеры через псевдоэлемент */
+.section__item::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+/* Стили для контактов */
+.contact-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Стили для проектов */
+.project {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.project__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.project__link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project__link:hover {
+    text-decoration: underline;
+}
+
+/* Профиль (аватар) */
+.profile__wrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile__avatar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #f1c40f;
+}
+
+.profile__job-title {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-top: 0.25rem;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer__github-link {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.footer__github-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- АДАПТИВНОСТЬ ---------- */
+
+/* Планшеты и маленькие ноутбуки (ширина <= 768px) */
+@media (max-width: 768px) {
+    .section {
+        flex: 1 1 100%; /* Секции занимают всю ширину (одна колонка) */
+    }
+
+    .main__container {
+        gap: 1.5rem;
+    }
+
+    .nav__list {
+        gap: 1rem;
+        justify-content: center; /* Центрируем меню */
+    }
+
+    .profile__wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Мобильные телефоны (ширина <= 480px) - здесь реализуем адаптивное меню */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .header {
+        padding: 0.5rem 0;
+    }
+
+    /* Адаптивное меню: колонка вместо строки */
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav__item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav__link {
+        display: block;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Убираем границу у последнего пункта */
+    .nav__item:last-child .nav__link {
+        border-bottom: none;
+    }
+
+    /* Корректировка отступов для секций */
+    .main {
+        padding: 1.5rem 0;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    .profile__avatar img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .section__title {
+        font-size: 1.35rem;
+    }
+}

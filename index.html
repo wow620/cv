@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Имя Фамилия - CV / Resume</title>
+<img src="avatar.jpg" alt="Аватар">
+    <!-- Подключаем шрифт (пример: Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Подключаем фавикон (создайте или используйте любой .ico) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <nav class="nav">
+                <!-- Адаптивное меню будет работать через CSS. Для 320px меню станет вертикальным -->
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                    <li class="nav__item"><a href="#summary" class="nav__link">Обо мне</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Навыки</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Опыт</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Образование</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container main__container">
+            <!-- Секция Профиль (аватар + имя) -->
+            <section class="section profile" id="profile">
+                <div class="profile__wrapper">
+                    <div class="profile__avatar">
+                        <!-- Замените "avatar.jpg" на имя вашего файла -->
+                        <img src="assets/img/avatar.jpg" alt="Аватар">
+                    </div>
+                    <div class="profile__info">
+                        <h1 class="section__title">Иван Иванов</h1>
+                        <p class="profile__job-title">Frontend Developer / Web-верстальщик</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция Контакты -->
+            <section class="section" id="contacts">
+                <h2 class="section__title">Контакты</h2>
+                <ul class="section__list">
+                    <li class="section__item"><span class="contact-icon">📞</span> +7 (999) 123-45-67</li>
+                    <li class="section__item"><span class="contact-icon">✉️</span> <a href="mailto:ivan@example.com">ivan@example.com</a></li>
+                    <li class="section__item"><span class="contact-icon">💻</span> <a href="https://github.com/GITHUB-USERNAME" target="_blank">GitHub</a></li>
+                    <li class="section__item"><span class="contact-icon">📍</span> Минск, Беларусь</li>
+                </ul>
+            </section>
+
+            <!-- Секция Обо мне -->
+            <section class="section" id="summary">
+                <h2 class="section__title">Обо мне</h2>
+                <p>Я начинающий frontend-разработчик с большим интересом к созданию красивых и удобных интерфейсов. Постоянно учусь новым технологиям и стремлюсь писать чистый, поддерживаемый код. Легко нахожу общий язык в команде и не боюсь challenging задач.</p>
+            </section>
+
+            <!-- Секция Навыки -->
+            <section class="section" id="skills">
+                <h2 class="section__title">Технические навыки</h2>
+                <ul class="section__list">
+                    <li class="section__item">HTML5, CSS3 (Flexbox, Grid, Адаптивная вёрстка)</li>
+                    <li class="section__item">JavaScript (базовый уровень, ES6+)</li>
+                    <li class="section__item">Git, GitHub (работа с ветками, Pull Requests)</li>
+                    <li class="section__item">Figma (Pixel Perfect)</li>
+                </ul>
+            </section>
+
+            <!-- Секция Опыт / Проекты -->
+            <section class="section" id="experience">
+                <h2 class="section__title">Опыт / Проекты</h2>
+                <div class="project">
+                    <h3 class="project__title">Сайт-портфолио</h3>
+                    <p>Верстка адаптивного сайта по макету Figma. Использована методология БЭМ.</p>
+                    <a href="#" class="project__link" target="_blank">Смотреть проект →</a>
+                </div>
+                <div class="project">
+                    <h3 class="project__title">Калькулятор на JS</h3>
+                    <p>Небольшое приложение для расчёта бюджета. Реализована логика на чистом JavaScript.</p>
+                    <a href="#" class="project__link" target="_blank">Смотреть проект →</a>
+                </div>
+            </section>
+
+            <!-- Секция Образование -->
+            <section class="section" id="education">
+                <h2 class="section__title">Образование и курсы</h2>
+                <ul class="section__list">
+                    <li class="section__item"><strong>2024 - по н.в.</strong> Онлайн-университет, специальность "Frontend разработчик"</li>
+                    <li class="section__item"><strong>2023</strong> Курс "HTML/CSS для начинающих", Stepik</li>
+                    <li class="section__item"><strong>2020 - 2024</strong> БГУИР, факультет компьютерного проектирования</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2025 Иван Иванов. Все права защищены.</p>
+            <a href="https://github.com/GITHUB-USERNAME/cv" class="footer__github-link" target="_blank">Репозиторий проекта</a>
+        </div>
+    </footer>
+</body>
+</html>
