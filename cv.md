@@ -26,7 +26,7 @@ return a + b;
 - JavaScript in progress
 
 ### English:
-- Intermediate/Upper-intermediate
+- Intermediate
 - ## Courses:
 
 - HTML and CSS Tutorials on w3schools (completed)
